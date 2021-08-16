@@ -1,0 +1,20 @@
+mixin contact()
+  .contact#contact
+    img(src="images/contact.webp", alt="").contact__img
+    .contact__body.container 
+      h2.contact__title Контакты
+      .contact__items
+        .contact__row
+          .contact__item
+            p.contact__p Телефоны:
+            a(href="tel:+0672715865").contact__link (067) 271 58 65
+            a(href="tel:0995379122").contact__link (099) 537 91 22
+          .contact__item
+            p.contact__p E-mail:
+            a(href="mailto:banya@gmail.com").contact__link banya@gmail.com
+            a(href="mailto:karaoke@gmail.com").contact__link karaoke@gmail.com
+        .contact__item.mt-25
+          p.contact__p Адрес:
+          a(href="mailto:banya@gmail.com").contact__link Г. Днепр
+          a(href="mailto:karaoke@gmail.com").contact__link ул. Ярослава Мудрого 27/31 (стар. ул. Ленинградская)
+      img(src="images/map.webp", alt="").contact__map
