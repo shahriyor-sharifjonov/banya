@@ -1,0 +1,131 @@
+.intro{
+  background: url('../images/intro.webp') center / cover no-repeat;
+  margin-top: -142px;
+  padding-top: 142px;
+  height: 100vh;
+  position: relative;
+  @include media($md){
+    margin-top: -112px;
+    padding-top: 112px;
+  }
+  &__body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: calc(100% - 142px); 
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  &__title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100px;
+    line-height: 125px;
+    text-align: right;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    @include media(1200){
+      margin-bottom: 30px;
+      font-size: 64px;
+      line-height: 120%;
+    }
+    @include media($md){
+      font-size: 36px;
+      text-align: center;
+      margin: 0 auto 30px auto;
+    }
+  }
+  &__p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: right;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+    max-width: 650px;
+    @include media(1200){
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 120%;
+    }
+    @include media($md){
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+  &__btn{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    background: linear-gradient(180deg, #FFC700 0%, #E06B01 100%);
+    box-shadow: 0px 4px 21px rgba(255, 197, 0, 0.7);
+    border-radius: 73px;
+    padding: 22px 97px;
+    cursor: pointer;
+    transition: 200ms ease;
+    @include media(1200){
+      font-size: 24px;
+      line-height: 120%;
+    }
+    @include media($md){
+      padding: 12px 22px;
+      font-size: 16px;
+      margin: 0 auto;
+    }
+    &:hover{
+      transform: translateY(-5px);
+    }
+  }
+  &__arrow{
+    position: absolute;
+    bottom: 63px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 122, 0, 0.5);
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include media(992){
+      bottom: 40px;
+    }
+    @include media($lg){
+      width: 60px;
+      height: 60px;
+    }
+    svg{
+      position: relative;
+      top: -50px;
+      animation: arrow 3s infinite;
+      @include media($lg){
+        height: 50px;
+      }
+    }
+  }
+}
+@keyframes arrow {
+  0%{
+    top: -50px;
+  }
+  50%{
+    top: -25px;
+  }
+  100%{
+    top: -50px;
+  }
+}

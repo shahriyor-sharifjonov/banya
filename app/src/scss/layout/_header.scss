@@ -1,0 +1,86 @@
+.header{
+  padding: 30px 50px;
+  z-index: 1;
+  @include media(400){
+    padding: 30px 20px;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+  }
+  &__logo{
+    font-family: 'Elisabeth', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+    color: #FFFFFF;
+    z-index: 1;
+    @include media($md){
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    @include media(1544){
+      display: none;
+    }
+  }
+  &__li{
+    &:not(:last-child){
+      margin-right: 47px;
+    }
+  }
+  &__link{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #FFFFFF;
+    &.active{
+      color: #FF7A00;
+    }
+  }
+  &__row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 1;
+  }
+  &__img{
+    padding-top: 5px;
+    padding-right: 10px;
+    object-fit: cover;
+    @include media($md){
+      width: 31px;
+    }
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__tel{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+    color: #FF7A00;
+    @include media($md){
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &:first-of-type{
+      margin-bottom: 10px;
+    }
+  }
+}
