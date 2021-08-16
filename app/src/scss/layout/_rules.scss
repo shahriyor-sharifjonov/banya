@@ -1,0 +1,28 @@
+.rules{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title{
+    margin-bottom: 50px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: center;
+    color: #333333;
+    @include media($md){
+      font-size: 36px;
+      line-height: 120%;
+    }
+  }
+  &__p{
+    line-height: 200%;
+    &:first-of-type{
+      margin-bottom: 50px;
+    }
+  }
+}
