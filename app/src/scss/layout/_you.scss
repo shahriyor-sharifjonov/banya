@@ -1,5 +1,8 @@
 .you{
   padding-bottom: 50px;
+  @include media($md){
+    padding-bottom: 100px;
+  }
   &__title{
     font-weight: normal;
     font-size: 48px;
@@ -7,6 +10,21 @@
     margin-bottom: 30px;
     text-align: center;
     color: #333333;
+    @include media($md){
+      font-size: 36px;
+    }
+  }
+  &__p{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    text-align: center;
+    color: #FF7A00;
+    margin-top: 50px;
+    @include media($md){
+      margin-top: 30px;
+    }
   }
   &__row{
     display: flex;
