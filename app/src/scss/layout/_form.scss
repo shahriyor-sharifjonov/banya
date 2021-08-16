@@ -1,0 +1,123 @@
+.form{
+  background: url('../images/form.webp') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 50px 15px;
+  &__body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800;
+    background: rgba(#FFFFFF, 0.8);
+    border-radius: 40px;
+    padding: 100px;
+    @include media($md){
+      padding: 50px 15px;
+    }
+  }
+  &__title{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 80px;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 50px;
+    @include media($md){
+      font-size: 36px;
+      line-height: 120%;
+      margin-bottom: 15px;
+    }
+  }
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__input{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 42px;
+    color: rgba(#333333, 0.8);
+    padding-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid rgba(#333333, 0.8);
+    width: 100%;
+    background: none;
+    @include media($md){
+      font-size: 18px;
+      padding-bottom: 5px;  
+    }
+    &_half{
+      width: calc(50% - 20px);
+      margin-bottom: 30px;
+      @include media($md){
+        width: 100%;
+        margin-bottom: 15px;
+      }
+      &:nth-child(odd){
+        margin-right: 20px;
+        @include media($md){
+          margin-right: 0;
+        }
+      }
+    }
+    &_big{
+      margin-bottom: 30px;
+    }
+  }
+  &__col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 173.6%;
+    color: rgba(#333333, 0.8);
+    font-family: 'marmelad', sans-serif;
+    margin-left: 15px;
+    cursor: pointer;
+  }
+  &__btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #FFFFFF;
+    padding: 20px 90px;
+    background: linear-gradient(180deg, #FFC700 0%, #E06B01 100%);
+    box-shadow: 0px 4px 21px rgba(255, 197, 0, 0.7);
+    border-radius: 73px;
+    border: none;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: 200ms ease;
+    font-family: inherit;
+    &:hover{
+      transform: translateY(-10px);
+    }
+    @include media($md){
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+  }
+}

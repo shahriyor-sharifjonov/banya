@@ -1,0 +1,17 @@
+mixin form()
+  .form#form  
+    .form__body.container 
+      h2.form__title Бронь
+      form.form__content(action="")
+        input(type="text" placeholder="Имя" required).form__input.form__input_half
+        input(type="text" placeholder="Фамилия" required).form__input.form__input_half
+        input(type="tel" placeholder="Телефон" required).form__input.form__input_half
+        input(type="email" placeholder="E-mail" required).form__input.form__input_half
+        input(type="date" placeholder="Дата" required).form__input.form__input_half
+        input(type="time" placeholder="Время" required).form__input.form__input_half
+        input(type="text" placeholder="Количество человек" required).form__input.form__input_big
+        .form__col
+          div
+            input(type="checkbox", name="chk" id="chk")
+            label(for="chk").form__label Не перезванивать для уточнения брони
+          button(type="submit").form__btn Забронировать
